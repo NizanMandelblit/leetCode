@@ -26,12 +26,12 @@ struct ListNode
 
 struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2)
 {
-    int l1Sum = 0;
-    int l2Sum = 0;
-    int l3Sum = 0;
-    double pos = 0;
+    long long unsigned l1Sum = 0;
+    long long unsigned l2Sum = 0;
+    long long unsigned l3Sum = 0;
+    long double pos = 0;
     struct ListNode *ptr = l1;
-    int i = 0;
+    long long unsigned i = 0;
     while (ptr != NULL)
     {
         pos = pow(10, i);
@@ -51,7 +51,7 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2)
     }
 
     l3Sum = l1Sum + l2Sum;
-    int l3SumRev = 0;
+    long long unsigned l3SumRev = 0;
     i = 0;
     while (l3Sum)
     {
