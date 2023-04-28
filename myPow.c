@@ -10,15 +10,15 @@ double myPow(double x, int n)
     }
     if (n < 0)
     {
-        n = (unsigned int)n * -1;
+        n = ((unsigned int)n) * -1;
         if (n % 2 == 0)
         {
-            m = 1 / myPow(x, n / 2);
+            m = 1.0 / myPow(x, n / 2);
             return m * m;
         }
         else
         {
-            return 1 / (myPow(x, ((unsigned int)n * -1)));
+            return 1.0 / (myPow(x, n));
         }
     }
     if (n % 2 == 0)
