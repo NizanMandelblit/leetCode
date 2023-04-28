@@ -36,9 +36,16 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2)
     {
         pos = pow(10, i);
         l1Sum = l1Sum + (ptr->val * (pos));
+    printf("%d l1sum is \r\n",l1Sum);
+
         ptr = ptr->next;
         i++;
     }
+  if (i>1 && l1Sum ==1)
+    {
+        l1Sum=pow(10,i) + 1;
+    }
+
     ptr = l2;
 
     i = 0;
@@ -49,6 +56,8 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2)
         ptr = ptr->next;
         i++;
     }
+  
+    
 
     l3Sum = l1Sum + l2Sum;
     long long unsigned l3SumRev = 0;
